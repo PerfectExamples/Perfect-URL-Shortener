@@ -1,0 +1,42 @@
+<!doctype html>
+<head>
+<meta charset="utf-8">
+
+<title>Perfect URL Shortener Demo</title>
+
+{{> style}}
+</head>
+<body>
+
+	<div id="header">
+		<h3>
+			<img id="logo" src="perfect-2.0.png" height="58" alt="Perfect Logo">
+			Perfect URL Shortener Demo
+		</h3>
+	</div>
+	<div id="content">
+		<form action="?" method="POST">
+			<input type="text" name="url" value="http://" placeholder="Enter a URL">
+			<input type="submit" value="Shorten">
+		</form>
+		<br>
+		<br>
+		<table width="800px">
+			<tr>
+				<th style="text-align: left">ID</th>
+				<th style="text-align: left">URL</th>
+				<th style="text-align: left">New Link</th>
+			</tr>
+			{{#urls}}
+			<tr>
+				<td style="text-align: left; padding-right: 10px">{{id}}</td>
+				<td style="text-align: left; padding-right: 10px">{{url}}</td>
+				<td style="text-align: left; padding-right: 10px"><a href="{{sanity}}" target="_blank">{{sanity}}</a></td>
+			</tr>
+			{{/urls}}
+
+		</table>
+	</div>
+
+</body>
+</html>
