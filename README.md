@@ -31,6 +31,7 @@ Ensure you have installed Xcode 8.0 or later.
 
 ## Setup - Xcode 8
 
+
 * Check out or download the project;
 * In terminal, navigate to the directory and execute
 
@@ -41,6 +42,16 @@ swift package generate-xcodeproj
 * Open `PerfectURLShortener.xcodeproj`
 
 Due to the complexity of running static file serving from Xcode, we suggest running this project from Terminal.
+
+Optionally, to run from within Xcode, edit the Scheme, Under "Options" for "run", check "Use custom working directory" and choose the project's working directory. After doing this, the project can be run from within Xcode.
+
+NOTE: Due to a late-breaking bug in Xcode 8, if you wish to run directly within Xcode, we recommend [installing swiftenv](https://swiftenv.fuller.li/en/latest/) and installing the Swift 3.0.1 preview toolchain.
+
+```
+# after installing swiftenv from https://swiftenv.fuller.li/en/latest/
+swiftenv install https://swift.org/builds/swift-3.0.1-preview-1/xcode/swift-3.0.1-PREVIEW-1/swift-3.0.1-PREVIEW-1-osx.pkg
+```
+
 
 ## Setup - Terminal
 
